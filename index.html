@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700" rel="stylesheet">
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #152716;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Cabin Sketch', cursive;
+  text-align: center;
+  font-size: 100px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 20px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("http://d1z88p83zuviay.cloudfront.net/Images/Recipes/Watercress%20And%20Salmon%20Cheese%20Pin%20Wheel%20Sandwiches_3.jpg");
+}
+.second{
+  background-image: url("http://d1z88p83zuviay.cloudfront.net/Images/Recipes/Spicy%20Onion%20Salad%20&%20Grilled%20Bratwurst%20Rolls%20With%20Curried%20Mayonnaise_3.jpg");
+}
+.dessert{
+  background-image: url("http://d1z88p83zuviay.cloudfront.net/Images/Recipes/Asian%20Prawn%20Spoons_3.jpg");
+  font-size: 17px;
+}
+.third{
+  background-image: url("http://d1z88p83zuviay.cloudfront.net/Images/Recipes/Cinnamon%20Spiced%20Pumpkin%20Soup%20With%20Wasabi%20Oil_3.jpg");
+  font-size: 17px;
+}
+.fourth{
+  background-image: url("http://d1z88p83zuviay.cloudfront.net/Images/Recipes/Miniature%20Sausage%20Rolls%20In%20Filo%20Pastry_3.jpg");
+  font-size: 17px;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Mr. Chef</h1>
+<h2>a Multi-Cuisine Restaurant </h2>
+<div class="first">
+  <p>
+WATERCRESS AND SALMON CHEESE PIN WHEEL SANDWICHES <span class="price">$16</span><br />
+  <small>Sandwiches for a ladies lunch or a tea time snack.These will keep refrigerated for several days, so they are ideal for a big party as the hard work can be done ahead of time. </small></p>
+</div>
+
+<div class="second">
+  <p>SPICY ONION SALAD & GRILLED BRATWURST ROLLS. <span class="price">$17</span><br />
+  <small>Recipe by: Celebrity Chef & Gastronome Rushina Munshaw - Ghildiyal
+    "A spiced up German classic".<small></p>
+</div>
+
+<div class="dessert">
+  <p>ASIAN PRAWN SPOONS<span class="price">$12</span><br />
+  <small>Recipe by: Celebrity Chef & Gastronome Rushina Munshaw - Ghildiyal
+"A sofisticated appetizer that looks as beautiful as it tastes. It's the perfect prelude to an elegant dinner."<small></p>
+</div>
+
+<div class="third">
+  <p>CINNAMON SPICED PUMPKIN SOUP WITH WASABI OIL<span class="price">$20</span><br />
+  <small>Recipe by: Celebrity Chef & Gastronome Rushina Munshaw - Ghildiyal
+"A creamy pumpkin soup to warm up wet or cold days. The strong wasabi and subtly sweet pumpkin together provide unforgettable flavour. Serve with a multi grain bread and garlic butter for a full meal."<small></p>
+</div>
+
+<div class="fourth">
+  <p>MINIATURE SAUSAGE ROLLS IN FILO PASTRYS<span class="price">$25</span><br />
+  <small>Recipe by: Celebrity Chef & Gastronome Rushina Munshaw - Ghildiyal
+"Inspired by the concept of 'pigs in a blanket'."<small></p>
+</div>
+
+<script>
+  $('div').on('click',function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
